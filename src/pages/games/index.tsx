@@ -86,7 +86,7 @@ export default function CatalogPage({
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap gap-12 px-32 py-12 xs:py-8 xs:justify-center sm:justify-start  xs:gap-y-6">
+      <div className="flex flex-wrap gap-12 xs:px-6 sm:px-32 py-12 xs:py-8 xs:justify-center sm:justify-start xs:gap-y-6">
         {currentGames.map((game, i) => (
           <CardGame
             key={game.id}
@@ -96,7 +96,7 @@ export default function CatalogPage({
           />
         ))}
       </div>
-      <div className="min-w-[380px] px-32 mb-6">
+      <div className="min-w-[380px] sm:px-32 xs:px-6 mb-6">
         <Button
           className="bg-neutral-700 text-white rounded-lg text-center disabled:opacity-35 xs:w-full sm:w-auto"
           onClick={handlePageChange}
