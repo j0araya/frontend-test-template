@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { allGames, Game } from "@/utils/endpoint";
-import CatalogPage from "./index";
+import CatalogPage from "../../src/pages/games/index";
 
 vi.mock("next/router", () => ({
   useRouter() {

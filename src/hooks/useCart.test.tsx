@@ -2,7 +2,6 @@ import { renderHook, act } from "@testing-library/react";
 import useCart from "./useCart";
 import { allGames } from "../utils/endpoint";
 
-
 describe("useCart Hook", () => {
   test("should add item to cart", () => {
     const { result } = renderHook(() => useCart());
