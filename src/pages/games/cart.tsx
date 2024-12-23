@@ -117,7 +117,7 @@ const CartPage = () => {
             <div className="py-5 grid gap-6">
               <div className="grid gap-3">
                 {Object.values(cart).map((product) => (
-                  <div className="flex text-primary">
+                  <div className="flex text-primary" key={product.id}>
                     <p className="flex-1 sm:text-xl">{product.name}</p>
                     <span className="sm:text-xl">$ {product.price}</span>
                   </div>

@@ -25,7 +25,6 @@ const useCart = () => {
   };
 
   const removeFromCart = (itemId: string) => {
-    console.log("itemID", itemId);
     if (cart[itemId]) {
       delete cart[itemId];
       setCart({ ...cart });
