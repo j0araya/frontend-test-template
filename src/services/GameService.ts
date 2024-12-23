@@ -22,7 +22,7 @@ export async function getGames(genre: string, page: number) {
 
     const query = new URLSearchParams(params).toString();
     const res = await fetch(
-      `http://localhost:3000/api/games?${query}`
+      `${process.env.NEXT_PUBLIC_URL}/api/games?${query}`
     );
     const data = (await res.json()) as GamesResponse;
     return { data, error: false };
