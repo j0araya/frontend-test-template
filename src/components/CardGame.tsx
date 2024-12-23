@@ -9,10 +9,7 @@ type Props = {
 
 export default function CardGame({ game, handleAddToCart, isAdded }: Props) {
   return (
-    <div
-      key={game.id}
-      className="max-w-[380px] w-full min-h-[460px] flex flex-col"
-    >
+    <div data-testid={`card-${game.id}`} className="max-w-[380px] w-full min-h-[460px] flex flex-col">
       <div
         className={`p-6 rounded-2xl h-full relative border-[#8F8F8F] border-[0.5px] flex flex-col flex-1`}
       >
@@ -44,7 +41,7 @@ export default function CardGame({ game, handleAddToCart, isAdded }: Props) {
             className="w-full border px-6 py-4 border-gray-medium rounded-lg"
             onClick={() => handleAddToCart(game)}
           >
-            <span>{isAdded? "Remove" : "ADD TO CART"}</span>
+            <span>{isAdded ? "Remove" : "ADD TO CART"}</span>
           </button>
         </div>
       </div>
