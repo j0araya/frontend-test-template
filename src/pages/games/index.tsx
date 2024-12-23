@@ -39,7 +39,7 @@ export default function CatalogPage({
     setLoading(true);
     const selectedGenre = e.target.value;
     const path = selectedGenre ? `?genre=${selectedGenre}` : "";
-    router.replace(`/${path}`);
+    router.replace(`/games${path}`);
     setSelected(selectedGenre);
     setCurrentPage(1);
   };
@@ -95,15 +95,15 @@ export default function CatalogPage({
             handleAddToCart={handleAddToCart}
           />
         ))}
-        <div className="max-w-[380px] flex flex-row">
-          <Button
-            className="bg-neutral-700 text-white rounded-lg text-center disabled:opacity-35 xs:w-full sm:w-auto"
-            onClick={handlePageChange}
-            disabled={totalPages === currentPage}
-          >
-            SEE MORE
-          </Button>
-        </div>
+      </div>
+      <div className="min-w-[380px] px-32 mb-6">
+        <Button
+          className="bg-neutral-700 text-white rounded-lg text-center disabled:opacity-35 xs:w-full sm:w-auto"
+          onClick={handlePageChange}
+          disabled={totalPages === currentPage}
+        >
+          SEE MORE
+        </Button>
       </div>
     </Layout>
   );
